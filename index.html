@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <section class="px-5">
+    <h1>Bài Tập 1</h1>
+    <h3>Tính Điểm Thi Đại Học</h3>
+    <form class="w-50">
+      <div class="form-group">
+        <input type="number" class="form-control" id="diemChuan" placeholder="Điểm chuẩn">
+      </div>
+      <div class="form-group">
+        <select class="form-control" id="khuVuc">
+          <option value="0">Chọn khu vực</option>
+          <option value="2">A</option>
+          <option value="1">B</option>
+          <option value="0.5">C</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <select class="form-control" id="doiTuong">
+          <option value="0">Chọn đối tượng</option>
+          <option value="2.5">1</option>
+          <option value="1.5">2</option>
+          <option value="1">3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" id="diemMonThu1" placeholder="Điểm môn thứ 1">
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" id="diemMonThu2" placeholder="Điểm môn thứ 2">
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" id="diemMonThu3" placeholder="Điểm môn thứ 3">
+      </div>
+      <div class="form-group">
+        <button id="btnResult" type="button" class="btn btn-primary ">Kết Quả</button>
+        <p id="txtResult" class="alert alert-success"></p>
+    </form>
+  </section>
+
+  <section class="px-5">
+    <h1>Bài Tập 2</h1>
+    <h3>Tính Tiền Điện</h3>
+    <form class="w-50">
+      <div class="form-group">
+        <input type="text" class="form-control" id="hoTen" placeholder="Nhập họ tên">
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" id="soKW" placeholder="Nhập số kw">
+      </div>
+      <div class="form-group">
+        <button id="btnTienDien" type="button" class="btn btn-primary ">Tính tiền điện</button>
+        <p id="txtTienDien" class="alert alert-success"></p>
+    </form>
+  </section>
+
+  <section class="px-5">
+    <h1>Bài Tập 3</h1>
+    <h3>Tính Thuế Thu Nhập Hằng Năm</h3>
+    <form class="w-50">
+      <div class="form-group">
+        <input type="text" class="form-control" id="nguoiChiuThue" placeholder="Nhập họ tên">
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" id="thuNhap" placeholder="Tổng thu nhập hằng năm">
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" id="soNguoiPhuThuoc" placeholder="Số người phụ thuộc">
+      </div>
+      <div class="form-group">
+        <button id="btnTienThue" type="button" class="btn btn-primary ">Tính tiền thuế</button>
+        <p id="txtTienThue" class="alert alert-success"></p>
+    </form>
+  </section>
+
+  <section class="px-5">
+    <h1>Bài Tập 4</h1>
+    <h3>Tính Tiền Cáp</h3>
+    <form class="w-50">
+      <div class="form-group">
+        <select class="form-control" id="loaiKH">
+          <option value="0">Chọn loại khách hàng</option>
+          <option value="nhaDan">Nhà Dân</option>
+          <option value="doanhNghiep">Doanh Nghiệp</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="maKH" placeholder="Nhập mã khách hàng">
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" id="soKenhCC" placeholder="Số kênh cao cấp">
+      </div>
+      <div class="form-group">
+        <input type="number" class="form-control" id="soKetNoi" placeholder="Số kết nối">
+      </div>
+      <div class="form-group">
+        <button id="btnTienCap" type="button" class="btn btn-primary ">Tính Tiền Cáp</button>
+        <p id="txtTienCap" class="alert alert-success"></p>
+    </form>
+  </section>
+  <script>
+    document.getElementById("loaiKH").onchange= function myFunction() {
+      var x = document.getElementById("loaiKH").value;
+      if (x == "doanhNghiep") {
+        document.getElementById("soKetNoi").style.display = 'block';
+      }else{
+        document.getElementById("soKetNoi").style.display = 'none';
+      }
+    }
+  </script>
+
+
+  <!-- <table border="2" align="center">
+      <tr>
+        <td rowspan="2">STT</td>
+        <td rowspan="2">Họ tên</td>
+        <td colspan="3" rowspan="1">Điểm</td>
+        <td rowspan="2">Tổng cộng</td>
+      </tr>
+        <tr>
+          <td>Toán</td>
+          <td>Lý</td>
+          <td>Hóa</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Nguyễn Văn A</td>
+          <td>7</td>
+          <td>6</td>
+          <td>9</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Lê Thị B</td>
+          <td>8</td>
+          <td>7</td>
+          <td>7</td>
+          <td>23</td>
+        </tr>
+    </table> -->
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
