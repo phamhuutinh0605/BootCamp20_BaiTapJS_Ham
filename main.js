@@ -145,20 +145,29 @@ document.getElementById("btnTienThue").onclick=tienThue;
 // Bài 4
 /**
  * khối 1:
- * hoTen,thuNhap,soNguoiPhuThuoc
+ * loaiKH,maKH,soKenh,soKetNoi
  * Thuế thu nhập các nhân phải chịu là:
- * tienThuNhapChiuThue=thuNhap-4e+6-16e+5*soNguoiPhuThuoc;
  * 
  * 
  * Khối 2:
  * B1: Lấy gtri từ form (khi click vào btn Tính Nào)
  * 
- * B2: Tính Tổng Điểm
- * Tính tiền thuế theo khoảng thu nhập cá nhân của người dùng
+ * B2: Tính Tiền Cáp
+ * Nhà Dân:
+ *  phi_xu_ly_hoa_don_NHA_DAN=4.5;
+ *  phi_dich_vu_NHA_DAN=20.5;
+ *  phi_kenh_cao_cap_NHA_DAN=7.5;
+ * 
+ * Doanh Nghiệp:
+ *  phi_xu_ly_hoa_don_DOANH_NGHIEP=15;
+ *  phi_dich_vu_DOANH_NGHIEP=75;
+ *  phi_kenh_cao_cap_DOANH_NGHIEP=50;
+ * 
+ * Nếu số kết nối của doanh nghiệp lớn hơn 10 thì sẽ tính theo giá là 5$/cái
  * 
  * B3:
  * 
- * khối 3: xuất ra họ tên người dùng và số tiền thuế.
+ * khối 3: xuất ra họ tên người dùng và số tiền cáp.
  * 
  */
 function tienCap(){
